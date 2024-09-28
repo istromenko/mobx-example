@@ -1,8 +1,7 @@
 import { observer } from "mobx-react-lite";
 import nameStore from "./store";
-import React from "react";
 
-const Header: React.FC = observer(() => {
+const Header= observer(() => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         nameStore.changeName(event.target.value);
     };
