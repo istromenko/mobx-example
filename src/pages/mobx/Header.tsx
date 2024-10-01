@@ -1,8 +1,8 @@
 import { observer } from "mobx-react-lite";
-import nameStore from "./store";
+import nameStore from "./store.ts";
 
 const Header= observer(() => {
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event) => {
         nameStore.changeName(event.target.value);
     };
 

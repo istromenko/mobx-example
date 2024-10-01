@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import nameStore from "./store";
+import nameStore from "./store.ts";
 
 const Footer = observer(() => {
     return (
