@@ -1,16 +1,14 @@
-import { makeAutoObservable } from "mobx";
+import { action, makeAutoObservable, observable } from "mobx";
 
 class NameStore {
-    name = '';
-
+    @observable name: string = '';
+    @action setName(newName: string) {
+        this.name = newName;
+    }
     constructor() {
         makeAutoObservable(this);
     }
-
-    changeName(name: string) {
-        this.name = name;
-    }
 }
 
-const nameStore = new NameStore();
+const  nameStore = new NameStore();
 export default nameStore;
